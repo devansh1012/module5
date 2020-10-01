@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vintage Restaurant</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora rel="stylesheet" type="text/css">	
+
+	<style>
+		body{
+			font-size: 16px;
+			color: #ffffff;
+			background-color:#000000;
+			font-family: 'Oxygen', sans-serif;
+		}
+
+		/** HEADER **/
+		#header-nav{
+			background-color: #211D1C;
+			border-radius: 0px;
+			border: 0;
+		}
+
+		#logo-img {
+			width: 150px;
+			height: 150px;
+			margin: 5px 10px 5px -10px;
+		}
+
+		.navbar-brand{
+			padding-top: 25px;
+		}
+
+		.navbar-brand h1{ /*Restaurant name*/
+			font-family: 'Lora' , serif;
+			color: #CDA500;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px #000000;
+			margin-top: 0;
+			margin-bottom: 0;
+			line-height: .75;
+		}
+
+		.navbar-brand a:hover , .navbar-brand a:focus{
+			text-decoration: none;
+		}
+		.navbar-brand p {/* Kosher Certi*/
+			color: #B1B19E;
+			text-transform: uppercase;
+			font-size: .7em;
+			margin-top: 15px;
+		}
+		.navbar-brand p span {/* Star*/
+			vertical-align: middle;
+		} 
+
+		#nav-list{
+			margin-top: 10px;
+		}
+		#nav-list a {
+			color: #951C49;
+			text-align: center;
+		}
+		#nav-list a:hover{
+			background:#E7E7E7;
+		}
+		#nav-list a span{
+			font-size: 1.8em;
+		}
+		#phone{
+			margin-top: 5px;
+		}
+		#phone a{/*Phone Number*/
+			text-align: right;
+			padding-bottom: 0;
+		}
+		#phone div{/* We Deliver*/
+			color: #557c3e;
+			text-align: right;
+			padding-right: 15px;
+		} 
+		.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+			border: 1px solid #61122f;
+		}
+		.navbar-header button.navbar-toggle{
+			clear: both;
+			margin-top: -30px;
+		}
+		/****END HEADER****/
+
+		/*Menu Category Page*/
+		.categories-tile{
+			position: relative;
+			border:2px solid #3F0C1F;
+			overflow: hidden;
+			width: 200px;
+			height: 200px;
+			margin: 0 auto 15px; 
+		}
+		.categories-tile span{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			text-align: center;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			background-color: #000000;
+			color: #fff;
+			opacity: .8;
+		}
+		.categories-tile:hover{
+			box-shadow: 0 1px 5px 1px #cccccc;
+		}
+		#menu-categories-title + div{
+			margin-bottom: 50px;
+		}
+		/*END MENU CATEGORY*/
+
+		/****SUPER SMALL DEVICE****/
+		@media(max-width: 479px){
+			/*HEADER*/
+			.navbar-brand h1{/*restaurant namr*/
+				padding-top: 5px;
+				font-size: 6vw;
+			}
+			/*END HEADER*/
+
+			/*HOME PAGE*/
+			#menu-tile, #specials-tile{
+				width: 280px;
+				margin:0 auto 15px;
+			}
+			.col-xxs-12{
+				position: relative;
+				min-height: 1px;
+				padding-right: 15px;
+				padding-left: 15px;
+				float: left;
+				width: 100%;
+			}
+		}
+
+		/****FOOTER****/
+		.panel-footer{
+			margin-top: 30px;
+			padding-top: 35px;
+			padding-bottom: 30px;
+			color: #A5A39C;
+			background-color: #2F282F;
+			border-top: 0;
+		}
+		.panel-footer div .row{
+			margin-bottom: 35px;
+		}
+		#hours, #address{
+			line-height:2;
+		}
+		#hours >span, #address > span{
+			font-size: 1.3em;
+		}
+		#address p{
+			color: #C86970;
+			font-size: .8em;
+			line-height: 1.8;
+		}
+		#testimonials{
+			font-style: italic; 
+		}
+		#testimonials p:nth-child(2){
+			margin-top: 25px;
+		}
+		/****END FOOTER****/
+	</style>
+</head>
+<body>
+	<header>
+		<nav id="header-nav" class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="restaurant.html" class='pull-left visible-md visible-lg'>
+						<div id="logo-img" alt="Logo image">
+							<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQuGUFVAUZ6RbBzSfLvMeCEwVe_ZKWAieES8A&usqp=CAU' height='150'>
+						</div>
+					</a>
+					
+					<div class="navbar-brand">
+						<a href="restaurant.html"><h1>VINTAGE Restaurant</h1></a>
+						<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/180px-Lamborghini_Logo.svg.png"width="30" height="30"><span>lamborghini Certified</span></p>
+					</div>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="fasle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				
+				<div id="collapsable-nav" class="collapse navbar-collapse">
+					<ul id="nav-list" class="nav navbar-nav navbar-right">
+						<li class="visible-xs">
+							<a href="restaurant.html"><span class="glyphicon glyphicon-home"></span>
+							Home</a>
+						</li>
+						<li class="active">
+							<a href="menu-categories.html">
+								<span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs">Menu</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs">About</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs">Awards</a>
+						</li>
+						<li id="phone" class="hidden-xs hidden-xxs">
+							<a href="tel:000-000-0000"><span>000-000-0000</span></a>
+							<div>*We Deliver</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div id="call-btn" class="visible-xs">
+		<a class="btn"href="000-000-0000">
+			<span class="glyphicon glyphicon-earphone"></span>000-000-0000</a>
+	</div>
+	<div id="xs-deliver" class="text-center visible-xs">*We Deliver</div>
+	<div id="main-content" class="container">
+		<h2 id="menu-categories-title" class="text-center">Menu Categories</h2>
+		<div class="text-center">Substituting white rice with brown rice or fried rice after 4:00pm
+		will be ₹70 fo 500gms and ₹125 for 900gms</div>
+
+		<section class="row">
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSWQw8ne_1FiNFkiz85b_aI7rMK6URB4mp2FA&usqp=CAU" alt="soups" align="center">
+						<span>Soups</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHPyzQ2KY_JByDxgB-lKE5492K59kdEDwrxg&usqp=CAU" alt="Starter" align="center">
+						<span>Starter</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmtRg1Rxpwqu7tEZz9oRFPvOb4XwKcSmuiMA&usqp=CAU" alt="sizzler" align="center">
+						<span>Sizzlers</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSSNf5qQD-ief60_TFP7ilIw0oky6IdVAKBng&usqp=CAU" alt="Pizza" align="center">
+						<span>Pizza</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQpOqbYE3EXyTbgT3Fs9oVpoih9B5OtLkh-Dw&usqp=CAU" alt="Indian" align="center">
+						<span>Indian</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ1GrlYy4-6G2CSntkeWhWiB2DaPcJnpPLKWw&usqp=CAU" alt="Dal" align="center">
+						<span>Dal</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS1Zi4fi_FieYoHL2OySuPaP8BSuxvYg-0WpA&usqp=CAU" alt="Rice" align="center">
+						<span>Rice</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQXGDQwUnkDtXKjFQYdsXvwEedTsKu5Zx3VKw&usqp=CAU" alt="Breads" align="center">
+						<span>Breads</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://c.ndtvimg.com/2019-01/aq34jsk_salad_120x90_23_January_19.jpg" alt="accompaniments" align="center">
+						<span>Accompaniments</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2qiAphRFTce_z7jvLdJlbI4oipMFnLdQfpg&usqp=CAU" alt="Desserts" align="center">
+						<span>Desserts</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ8sWxHdqglpW2lRO6d-8gUpqDgFrs8sDSzlA&usqp=CAU" alt="beverages" align="center">
+						<span>Beverages</span>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+				<a href="single-category.html">
+					<div class="categories-tile">
+						<img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiOv5BHEmpyboaSv3g_6npJR-_jrQ6i6m8EQ&usqp=CAU" alt="Lunch & Dinner" align="center">
+						<span>Lunch & Dinner</span>
+					</div>
+				</a>
+			</div>
+		</section>
+	</div>
+
+	<footer class="panel-footer">
+		<div class="container">
+			<div class="row">
+				<section id="hours" class="col-sm-4">
+					<span>Hours:</span><br>
+					Mon-Fri: 9:00am - 10:00pm<br>
+					Sat & Sun: 9:30am - 11:00pm<br>
+					<hr class="visible-xs">
+				</section>
+				<section id="address" class="col-sm-4">
+					<span>Address</span><br>
+					Shukan Sky, Nr.City Pulse Theater<br>
+					Kudasan, Gandhinagar<br>
+					Pin: 382421
+					<p>*Delivery within 4-5 kms, and  minimum order of ₹300.</p>
+					<hr class="visible-xs">
+				</section>
+				<section id="testimonials" class="col-sm-4">
+					<p>'Closely kneat community. All festival celebrated. Well maintained. Close to school, hosp., cinema etc.'</p>
+					<p>'Best place to stay with family..  Amazing environment..  Location.. Place..'</p>
+				</section>
+			</div>
+			<div class="text-center">&copy; Copyright Shukan Sky ,&nbsp;&copy; Lamborghini Automobili</div>
+		</div>
+	</footer>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+
+	
+</body>
+</html>
